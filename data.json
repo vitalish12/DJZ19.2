@@ -1,0 +1,18 @@
+[
+  {
+    "model": "main.category",
+    "pk": 1,
+    "fields": {
+      "name_category": "фрукты",
+      "category_description": "Самые свежие фрукты с полей Абхазии"
+    }
+  },
+  {
+    "model": "main.category",
+    "pk": 2,
+    "fields": {
+      "name_category": "овощи",
+      "category_description": "Свежие овощи из краснодарского края"
+    }
+  }
+]
