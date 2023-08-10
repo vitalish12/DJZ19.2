@@ -1,15 +1,14 @@
 from django.shortcuts import render, get_object_or_404
 from datetime import datetime
 from main.models import Product
+from django.views.generic import ListView, DetailView
 
 
 # Create your views here.
-def index(request):
-    cat_list = Product.objects.all()
-    context = {
-        'object_list': cat_list
-    }
-    return render(request, 'main/index.html', context)
+
+class ProductListView(ListView):
+    model = Product
+    template_name = 'main/index.html'
 
 
 def contacts(request):
@@ -24,11 +23,9 @@ def contacts(request):
     return render(request, 'main/contacts.html')
 
 
-def product(request, product_id):
-    """представление страницы main/product.html для каждого продукта"""
-    prod_get = get_object_or_404(Product, pk=product_id)
-
-    return render(request, 'main/product.html', {'product': prod_get})
+class ProductDetailView(DetailView):
+    model = Product
+    template_name = 'main/product.html'
 
 
 def great_prod(request):
