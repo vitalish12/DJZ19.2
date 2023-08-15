@@ -14,7 +14,7 @@
                 <div class="card">
                     <div class="card-body">
                         <h3 class="card-title">{{ object.title_post }}</h3>
-                        <img src="/media/123.jpeg" alt="Card image">
+                        <img src="/media/{{ object.image_post }}" alt="Card image">
 
                         <a href="{% url 'blog:view' object.pk %}" class="btn btn-primary">Читать</a>
                         <a href="{% url 'blog:edit' object.pk %}" class="btn btn-primary">Изменить</a>
