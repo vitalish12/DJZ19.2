@@ -5,10 +5,24 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Skystore</title>
+    <title>Махмуджан</title>
 
     <!--bootstrap-->
     <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <style>
+        .card-image {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+        .image-container {
+    max-width: 100%;
+    max-height: 300px; /* Максимальная высота, подстраивайте под свои требования */
+    overflow: hidden;
+}
+    </style>
 
 </head>
 <body>
@@ -18,7 +32,6 @@
     <nav class="ms-5">
         <a class="p-2 btn btn-outline-primary" href="/">Каталог</a>
         <a class="p-2 btn btn-outline-primary" href="/contacts/">Контакты</a>
-        <a class="p-2 btn btn-outline-primary" href="/great_prod/">Добавить продукт</a>
         <a class="p-2 btn btn-outline-primary" href="/blog/">Статьи</a>
     </nav>
 </div>

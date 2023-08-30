@@ -1,6 +1,5 @@
 from django.urls import path
 from . import views
-from main.views import contacts, great_prod, ProductListView, ProductDetailView
 
 from blog.apps import BlogConfig
 from .views import BlogCreateView, BlogListView, BlogDetailView, BlogUpdateView, BlogDeleteView

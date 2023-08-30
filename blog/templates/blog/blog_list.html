@@ -12,13 +12,13 @@
         <div class="col-3">
             <div class="card mb-4 box-shadow">
                 <div class="card">
-                    <div class="card-body">
+                    <div class="card-body" >
                         <h3 class="card-title">{{ object.title_post }}</h3>
-                        <img src="/media/{{ object.image_post }}" alt="Card image">
+                        <img src="/media/{{ object.image_post }}" alt="Card image" class="mb-4">
 
-                        <a href="{% url 'blog:view' object.pk %}" class="btn btn-primary">Читать</a>
-                        <a href="{% url 'blog:edit' object.pk %}" class="btn btn-primary">Изменить</a>
-                        <a href="{% url 'blog:delete' object.pk %}" class="btn btn-primary">Удалить</a>
+                        <a href="{% url 'blog:view' object.pk %}" class="btn btn-primary mb-4">Читать</a>
+                        <a href="{% url 'blog:edit' object.pk %}" class="btn btn-secondary mb-4">Изменить</a>
+                        <a href="{% url 'blog:delete' object.pk %}" class="btn btn-danger">Удалить</a>
                     </div>
                 </div>
             </div>

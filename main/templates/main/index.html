@@ -8,6 +8,10 @@
             <h2>Самые свежие продукты из средней азии</h2>
         </div>
 
+
+        <a class="btn btn-primary mb-5" href="{% url 'create_product' %}">Добавить продукт</a>
+
+
     {% for object in object_list %}
         <div class="col-3">
             <div class="card mb-4 box-shadow">
@@ -15,11 +19,16 @@
                     <div class="card-body">
                         <h3 class="card-title">{{ object.name_prod }}</h3>
                         <h4 class="card-title pricing-card-title">{{ object.price_prod }} руб.</h4>
-                        <img src="/media/123.jpeg" alt="Card image">
-                        <p class="card-text">
+
+                            <div class="image-container">
+                                <img src="/media/{{ object.img_prod }}" alt="Card image" class="card-image">
+                            </div>
+                                <p class="card-text">
                             {{ object.description_prod }}
-                        </p>
-                        <a href="{% url 'product' object.id %}" class="btn btn-primary">Купить</a>
+                                </p>
+                                <a href="{% url 'product' object.pk %}" class="btn btn-primary mb-4">Купить</a>
+                                <a href="{% url 'update_product' object.pk %}" class="btn btn-secondary mb-4">Изменить</a>
+                                <a href="{% url 'delete' object.pk %}" class="btn btn-danger">Удалить</a>
                     </div>
                 </div>
             </div>
