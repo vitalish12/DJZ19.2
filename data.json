@@ -1,18 +1,1 @@
-[
-  {
-    "model": "main.category",
-    "pk": 1,
-    "fields": {
-      "name_category": "фрукты",
-      "category_description": "Самые свежие фрукты с полей Абхазии"
-    }
-  },
-  {
-    "model": "main.category",
-    "pk": 2,
-    "fields": {
-      "name_category": "овощи",
-      "category_description": "Свежие овощи из краснодарского края"
-    }
-  }
-]
+[{"model": "main.product", "pk": 33, "fields": {"name_prod": "Помидоры", "description_prod": "Красные прекрасные", "img_prod": "preview/23_BRbMR6s.jpg", "category": 3, "price_prod": 50, "data_create_prod": "2023-08-24T12:11:47.637Z", "data_change_prod": "2023-08-24T13:40:17.582Z"}}, {"model": "main.product", "pk": 34, "fields": {"name_prod": "Огурец", "description_prod": "Зелёный попец", "img_prod": "preview/1234.jpg", "category": 3, "price_prod": 133, "data_create_prod": "2023-08-24T12:17:47.970Z", "data_change_prod": "2023-08-29T06:32:29.543Z"}}, {"model": "main.product", "pk": 35, "fields": {"name_prod": "Хлеб", "description_prod": "Кирпич для тех кто помнит", "img_prod": "preview/34.jpg", "category": 2, "price_prod": 45, "data_create_prod": "2023-08-24T12:23:40.725Z", "data_change_prod": "2023-08-29T06:29:53.768Z"}}, {"model": "main.product", "pk": 36, "fields": {"name_prod": "Арбуз", "description_prod": "Сладенький без косточек", "img_prod": "preview/9071359-0_M28eyLd.jpg", "category": null, "price_prod": 124, "data_create_prod": "2023-08-24T12:25:45.392Z", "data_change_prod": "2023-08-24T13:40:50.692Z"}}, {"model": "main.product", "pk": 37, "fields": {"name_prod": "Гранат", "description_prod": "Ох какой фах фах", "img_prod": "preview/634.jpg", "category": 1, "price_prod": 244, "data_create_prod": "2023-08-24T12:26:07.308Z", "data_change_prod": "2023-08-29T06:56:34.534Z"}}, {"model": "main.product", "pk": 38, "fields": {"name_prod": "Багет", "description_prod": "Не из Франции конечно", "img_prod": "preview/42.jpg", "category": 2, "price_prod": 35, "data_create_prod": "2023-08-24T12:26:30.497Z", "data_change_prod": "2023-08-29T06:43:33.306Z"}}, {"model": "main.product", "pk": 39, "fields": {"name_prod": "Картофель", "description_prod": "Как у бабки с грядки", "img_prod": "preview/412.jpg", "category": 3, "price_prod": 43, "data_create_prod": "2023-08-24T12:27:00.881Z", "data_change_prod": "2023-08-24T12:27:00.881Z"}}, {"model": "main.category", "pk": 1, "fields": {"name_category": "Фрукты", "category_description": "Очень вкусные"}}, {"model": "main.category", "pk": 2, "fields": {"name_category": "Хлеб", "category_description": "Свежий, только из печи"}}, {"model": "main.category", "pk": 3, "fields": {"name_category": "Овощи", "category_description": "Только с грядки сорвали"}}, {"model": "main.version", "pk": 1, "fields": {"product": 34, "version_number": "1", "version_name": "красный попец", "is_current": true}}, {"model": "main.version", "pk": 2, "fields": {"product": 36, "version_number": "111", "version_name": "21212", "is_current": true}}]

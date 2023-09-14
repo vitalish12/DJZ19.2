@@ -1,8 +1,17 @@
+from django.conf import settings
 from django.db import models
 
 
 # Create your models here.
 class Product(models.Model):
+    # STATUS_CREATED = 'created'
+    # STATUS_MODERATED = 'moderated'
+    # STATUS_PUBLISH = 'published'
+    # STATUSES = (
+    #     (STATUS_CREATED, 'Добавлен'),
+    #     (STATUS_MODERATED, 'На модерации'),
+    #     (STATUS_PUBLISH, 'Опубликован'),
+    # )
     name_prod = models.CharField(max_length=100, verbose_name='Наименование')
     description_prod = models.CharField(max_length=100, verbose_name='Описание')
     img_prod = models.ImageField(upload_to='preview', verbose_name='Превью', null=True, blank=True)
@@ -10,6 +19,8 @@ class Product(models.Model):
     price_prod = models.IntegerField(verbose_name='Цена', null=True, blank=True, help_text='Введите цену продукта в рублях')
     data_create_prod = models.DateTimeField(auto_now_add=True, verbose_name='Дата создания')
     data_change_prod = models.DateTimeField(auto_now=True, verbose_name='Дата изменения')
+
+    user_boss = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.SET_NULL, null=True, blank=True, verbose_name='Продавец')
 
     def __str__(self):
         return f'{self.name_prod} {self.price_prod} {self.description_prod}'

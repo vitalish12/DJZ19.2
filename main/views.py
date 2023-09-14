@@ -24,6 +24,26 @@ class ProductListView(ListView):
     model = Product
     template_name = 'main/index.html'
 
+    # def get_queryset(self):
+    #     user = self.request.user
+    #     if user.is_authenticated:
+    #         # Если пользователь аутентифицирован (в том числе владелец товара)
+    #         if user.is_staff or user.is_superuser:
+    #             # Для администраторов показываем все продукты
+    #             queryset = super().get_queryset()
+    #
+    #         else:
+    #             # Для остальных аутентифицированных пользователей
+    #             queryset = super().get_queryset().filter(
+    #                 status=Product.STATUS_PUBLISH
+    #             )
+    #     else:
+    #         # Для неаутентифицированных пользователей
+    #         queryset = super().get_queryset().filter(
+    #             status=Product.STATUS_PUBLISH
+    #         )
+    #     return queryset
+
 
 def contacts(request):
     """Контроллер, который отвечает за отображение контактной информации."""
@@ -69,10 +89,15 @@ class ProductCreateView(CreateView):
     success_url = reverse_lazy('index')
 
     def form_valid(self, form):
-        if form.is_valid():
-            new_mat = form.save()
-            new_mat.slug = slugify(new_mat.title_post)
-            new_mat.save()
+        self.object = form.save()
+        self.object.user_boss = self.request.user
+        self.object.save()
+
+    # def form_valid(self, form):
+    #     if form.is_valid():
+    #         new_mat = form.save()
+    #         new_mat.slug = slugify(new_mat.title_post)
+    #         new_mat.save()
 
         return super().form_valid(form)
 
